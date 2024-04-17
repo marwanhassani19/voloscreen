@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,17 +15,21 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System.Diagnostics;
 
 namespace voli
 {
     public partial class Form1 : Form
     {
-       
+
         Dictionary<string, string> countries = new Dictionary<string, string>();
 
         Dictionary<string, string> airports = new Dictionary<string, string>();
 
-        private int budget; 
+        private int budget;
+        private string partenzaAeroporto;
+        private string airportCode;
+        private string tipoViaggio;
 
 
         public Form1()
@@ -46,17 +50,17 @@ namespace voli
 
             comboBox1.SelectedIndexChanged += new EventHandler(comboBox1_SelectedIndexChanged);
 
-
+            comboBox2.SelectedIndexChanged += new EventHandler(comboBox2_SelectedIndexChanged);
         }
 
 
-      
 
-      
+
+
         private void PopulateAirports()
         {
             // Aggiungi gli aeroporti e i relativi codici al dizionario
-     
+
             airports.Add("Heathrow (Londra, Regno Unito)", "LHR");
             airports.Add("Gatwick (Londra, Regno Unito)", "LGW");
             airports.Add("Stansted (Londra, Regno Unito)", "STN");
@@ -103,11 +107,11 @@ namespace voli
             if (listView1.SelectedItems.Count > 0)
             {
                 // Ottieni il nome e il codice dell'aeroporto selezionato
-                string airportName = listView1.SelectedItems[0].Text;
-                string airportCode = listView1.SelectedItems[0].SubItems[1].Text;
+                partenzaAeroporto = listView1.SelectedItems[0].Text;
+                airportCode = listView1.SelectedItems[0].SubItems[1].Text;
 
                 // Fai qualcosa con il nome e il codice dell'aeroporto (ad esempio, visualizzali in un MessageBox)
-                MessageBox.Show("Hai selezionato l'aeroporto: " + airportName + " (" + airportCode + ")");
+                MessageBox.Show("Hai selezionato l'aeroporto: " + partenzaAeroporto + " (" + airportCode + ")");
             }
             else
             {
@@ -115,7 +119,7 @@ namespace voli
             }
         }
 
-       
+
         private void textBox1_Click(object sender, EventArgs e)
         {
             // Mostra la ListView quando viene cliccata la TextBox
@@ -138,7 +142,7 @@ namespace voli
             {
                 // Imposta il valore della variabile a 50
                 budget = 20;
-                 
+
             }
             // Verifica se è selezionato l'elemento "50"
             if (comboBox1.SelectedItem != null && comboBox1.SelectedItem.ToString() == "50")
@@ -151,7 +155,7 @@ namespace voli
                 // Imposta il valore della variabile a 50
                 budget = 60;
             }
-            
+
             // Verifica se è selezionato l'elemento "50"
             if (comboBox1.SelectedItem != null && comboBox1.SelectedItem.ToString() == "80")
             {
@@ -172,7 +176,7 @@ namespace voli
             }
         }
 
-      
+
         private void dtPartenza_ValueChanged(object sender, EventArgs e)
         {
             DateTime selectedDate = dtPartenza.Value;
@@ -183,20 +187,98 @@ namespace voli
 
         private void dtRitorno_ValueChanged(object sender, EventArgs e)
         {
-            DateTime selectedDate = dtRitorno.Value;
+            DateTime selectedDate2 = dtRitorno.Value;
 
             // Formatta la data nel formato desiderato (anno-mese-giorno) utilizzando la cultura "en-US"
-            string formattedDate = selectedDate.ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+            string formattedDate2 = selectedDate2.ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+        }
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox2.SelectedItem != null && comboBox1.SelectedItem.ToString() == "CITTA'")
+            {
+                // Imposta il valore della variabile a 50
+                tipoViaggio = "CTY";
+
+            }
+            if (comboBox2.SelectedItem != null && comboBox1.SelectedItem.ToString() == "FAMIGLIA")
+            {
+                // Imposta il valore della variabile a 50
+                tipoViaggio = "FAM";
+
+            }
+            if (comboBox2.SelectedItem != null && comboBox1.SelectedItem.ToString() == "GOLF")
+            {
+                // Imposta il valore della variabile a 50
+                tipoViaggio = "GLF";
+
+
+            }
+            if (comboBox2.SelectedItem != null && comboBox1.SelectedItem.ToString() == "VITA NOTTURNA")
+            {
+                // Imposta il valore della variabile a 50
+                tipoViaggio = "NIT";
+
+            }
+            if (comboBox2.SelectedItem != null && comboBox1.SelectedItem.ToString() == " ALL'APERTO")
+            {
+                // Imposta il valore della variabile a 50
+                tipoViaggio = "OUT";
+
+            }
+
+            if (comboBox2.SelectedItem != null && comboBox1.SelectedItem.ToString() == "MARE")
+            {
+                // Imposta il valore della variabile a 50
+                tipoViaggio = "SEA";
+            }
         }
 
-
-private void button2_Click(object sender, EventArgs e)
+        private void btnInformazioni_Click(object sender, EventArgs e)
         {
 
-        string message = "Clicca [qui](https://www.example.com) per visitare il sito web.";
-        MessageBox.Show(message, "Messaggio con link", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //ANDATA
+            DateTime selectedDate = dtPartenza.Value;
+            string formattedDate = selectedDate.ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+            Console.WriteLine("formattedDate: " + formattedDate); // Aggiungi questa linea per il debug
+            string message = $"La data formattata è: {formattedDate}";
+            // MessageBox.Show(message, "Data Formattata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+
+
+
+            //RITORNO
+            DateTime selectedDate2 = dtRitorno.Value;
+            string formattedDate2 = selectedDate2.ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+            Console.WriteLine("formattedDate: " + formattedDate2); // Aggiungi questa linea per il debug
+            string message2 = $"La data formattata è: {formattedDate2}";
+            // MessageBox.Show(message2, "Data Formattata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+
+
+            // Verifica se è stato selezionato un aeroporto
+            if (listView1.SelectedItems.Count > 0)
+            {
+                // Ottieni il nome e il codice dell'aeroporto selezionato
+                partenzaAeroporto = listView1.SelectedItems[0].Text;
+                airportCode = listView1.SelectedItems[0].SubItems[1].Text;
+
+            }
+            else
+            {
+                MessageBox.Show("Seleziona un aeroporto prima di procedere.");
+            }
+            //  string message3 = $"Informazioni:\nPartenza: {airportCode}\nBudget: {budget}\nData di Andata: {formattedDate}\nData di Ritorno: {formattedDate2}";
+            // MessageBox.Show(message3, "Dettagli Viaggio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"https://www.ryanair.com/it/it/voli-low-cost/?from={airportCode}&out-from-date={formattedDate}&out-to-date={formattedDate2}&budget={budget}&trip-type-category={tipoViaggio}");
+            lbLink.Text = $"https://www.ryanair.com/it/it/voli-low-cost/?from={airportCode}&out-from-date={formattedDate}&out-to-date={formattedDate2}&budget={budget}&trip-type-category={tipoViaggio}";
+            txtLink.Text = $"https://www.ryanair.com/it/it/voli-low-cost/?from={airportCode}&out-from-date={formattedDate}&out-to-date={formattedDate2}&budget={budget}&trip-type-category={tipoViaggio}";
+            Process.Start(txtLink.Text);
         }
-        //diver.Navigate().GoToUrl($"https://www.travel365.it/destinazioni/europa/italia/lombardia/{luogo}/");
+
+
     }
 }
-
