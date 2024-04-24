@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +15,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using static System.Windows.Forms.LinkLabel;
 using System.Diagnostics;
 
 namespace voli
@@ -25,10 +26,10 @@ namespace voli
         Dictionary<string, string> countries = new Dictionary<string, string>();
 
         Dictionary<string, string> airports = new Dictionary<string, string>();
-
-        private int budget;
         private string partenzaAeroporto;
         private string airportCode;
+
+        private int budget;
         private string tipoViaggio;
 
 
@@ -50,14 +51,35 @@ namespace voli
 
             comboBox1.SelectedIndexChanged += new EventHandler(comboBox1_SelectedIndexChanged);
 
-            comboBox2.SelectedIndexChanged += new EventHandler(comboBox2_SelectedIndexChanged);
+
+            comboBox2.SelectedIndexChanged += new EventHandler(comboBox2_SelectedIndexChanged_1);
+
+
+
+            rbSpecifica.Visible = false;
+
+            rbIntervallo.Visible = false;
+            panelPartenza.Visible = false;
+
+
+            txtPartenza.Click += new EventHandler(txtPartenza_Click);
+
+            rbSpecifica.CheckedChanged += new EventHandler(rbSpecifica_CheckedChanged);
+            rbIntervallo.CheckedChanged += new EventHandler(rbIntervallo_CheckedChanged);
+
+            dtPartenza.Visible = false;
+            dtRitorno.Visible = false;
+
+
+
+
         }
 
 
 
 
 
-        private void PopulateAirports()
+        public void PopulateAirports()
         {
             // Aggiungi gli aeroporti e i relativi codici al dizionario
 
@@ -82,7 +104,7 @@ namespace voli
             airports.Add("Bromma (Stoccolma, Svezia)", "BMA");
             // Aggiungi altri aeroporti secondo necessità
         }
-        private void InitializeListView()
+        public void InitializeListView()
         {
             // Imposta le proprietà della ListView
             listView1.View = View.Details;
@@ -101,31 +123,15 @@ namespace voli
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // Verifica se è stato selezionato un aeroporto
-            if (listView1.SelectedItems.Count > 0)
-            {
-                // Ottieni il nome e il codice dell'aeroporto selezionato
-                partenzaAeroporto = listView1.SelectedItems[0].Text;
-                airportCode = listView1.SelectedItems[0].SubItems[1].Text;
-
-                // Fai qualcosa con il nome e il codice dell'aeroporto (ad esempio, visualizzali in un MessageBox)
-                MessageBox.Show("Hai selezionato l'aeroporto: " + partenzaAeroporto + " (" + airportCode + ")");
-            }
-            else
-            {
-                MessageBox.Show("Seleziona un aeroporto prima di procedere.");
-            }
-        }
+      
 
 
-        private void textBox1_Click(object sender, EventArgs e)
+        public void textBox1_Click(object sender, EventArgs e)
         {
             // Mostra la ListView quando viene cliccata la TextBox
             listView1.Visible = true;
         }
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        public void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Mostra il testo selezionato nella TextBox
             if (listView1.SelectedItems.Count > 0)
@@ -133,7 +139,7 @@ namespace voli
                 textBox1.Text = listView1.SelectedItems[0].Text;
             }
         }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        public void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
 
@@ -177,6 +183,7 @@ namespace voli
         }
 
 
+
         private void dtPartenza_ValueChanged(object sender, EventArgs e)
         {
             DateTime selectedDate = dtPartenza.Value;
@@ -192,48 +199,50 @@ namespace voli
             // Formatta la data nel formato desiderato (anno-mese-giorno) utilizzando la cultura "en-US"
             string formattedDate2 = selectedDate2.ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
         }
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+
+
+        private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (comboBox2.SelectedItem != null && comboBox1.SelectedItem.ToString() == "CITTA'")
+            if (comboBox2.SelectedItem != null && comboBox2.SelectedItem.ToString() == "CITTA'")
             {
                 // Imposta il valore della variabile a 50
                 tipoViaggio = "CTY";
 
             }
-            if (comboBox2.SelectedItem != null && comboBox1.SelectedItem.ToString() == "FAMIGLIA")
+            if (comboBox2.SelectedItem != null && comboBox2.SelectedItem.ToString() == "FAMIGLIA")
             {
                 // Imposta il valore della variabile a 50
                 tipoViaggio = "FAM";
 
             }
-            if (comboBox2.SelectedItem != null && comboBox1.SelectedItem.ToString() == "GOLF")
+            if (comboBox2.SelectedItem != null && comboBox2.SelectedItem.ToString() == "GOLF")
             {
                 // Imposta il valore della variabile a 50
                 tipoViaggio = "GLF";
 
 
             }
-            if (comboBox2.SelectedItem != null && comboBox1.SelectedItem.ToString() == "VITA NOTTURNA")
+            if (comboBox2.SelectedItem != null && comboBox2.SelectedItem.ToString() == "VITA NOTTURNA")
             {
                 // Imposta il valore della variabile a 50
                 tipoViaggio = "NIT";
 
             }
-            if (comboBox2.SelectedItem != null && comboBox1.SelectedItem.ToString() == " ALL'APERTO")
+            if (comboBox2.SelectedItem != null && comboBox2.SelectedItem.ToString() == " ALL'APERTO")
             {
                 // Imposta il valore della variabile a 50
                 tipoViaggio = "OUT";
 
             }
 
-            if (comboBox2.SelectedItem != null && comboBox1.SelectedItem.ToString() == "MARE")
+            if (comboBox2.SelectedItem != null && comboBox2.SelectedItem.ToString() == "MARE")
             {
                 // Imposta il valore della variabile a 50
                 tipoViaggio = "SEA";
             }
         }
 
-        private void btnInformazioni_Click(object sender, EventArgs e)
+        private void btnInformazioni_Click_1(object sender, EventArgs e)
         {
 
             //ANDATA
@@ -274,11 +283,46 @@ namespace voli
             //  string message3 = $"Informazioni:\nPartenza: {airportCode}\nBudget: {budget}\nData di Andata: {formattedDate}\nData di Ritorno: {formattedDate2}";
             // MessageBox.Show(message3, "Dettagli Viaggio", MessageBoxButtons.OK, MessageBoxIcon.Information);
             MessageBox.Show($"https://www.ryanair.com/it/it/voli-low-cost/?from={airportCode}&out-from-date={formattedDate}&out-to-date={formattedDate2}&budget={budget}&trip-type-category={tipoViaggio}");
-            lbLink.Text = $"https://www.ryanair.com/it/it/voli-low-cost/?from={airportCode}&out-from-date={formattedDate}&out-to-date={formattedDate2}&budget={budget}&trip-type-category={tipoViaggio}";
+
             txtLink.Text = $"https://www.ryanair.com/it/it/voli-low-cost/?from={airportCode}&out-from-date={formattedDate}&out-to-date={formattedDate2}&budget={budget}&trip-type-category={tipoViaggio}";
             Process.Start(txtLink.Text);
         }
 
+        private void txtPartenza_Click(object sender, EventArgs e)
+        {
+            rbIntervallo.Visible = true;
+            rbSpecifica.Visible = true;
+            panelPartenza.Visible = true;
+        }
 
+
+        private void rbSpecifica_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbSpecifica.Checked)
+            {
+                dtPartenza.Visible = true;
+                
+            }
+          
+        }
+        private void rbIntervallo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbIntervallo.Checked)
+            {
+                dtPartenza.Visible = true;
+              dtRitorno.Visible = true;
+
+            }
+            else
+            {
+                dtRitorno.Visible = false;
+            }
+
+        }
+
+      
     }
 }
+
+
+
