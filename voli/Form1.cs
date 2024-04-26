@@ -33,7 +33,11 @@ namespace voli
         Dictionary<string, string> airports = new Dictionary<string, string>();
         private string partenzaAeroporto;
         private string airportCode;
+<<<<<<< HEAD
         private int num = 0;
+=======
+
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
         private int budget;
         private string tipoViaggio;
 
@@ -57,7 +61,11 @@ namespace voli
         
 
 
+<<<<<<< HEAD
             //comboBox2.SelectedIndexChanged += new EventHandler(comboBox2_SelectedIndexChanged_1);
+=======
+            comboBox2.SelectedIndexChanged += new EventHandler(comboBox2_SelectedIndexChanged_1);
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
 
 
 
@@ -74,11 +82,18 @@ namespace voli
 
             dtPartenza.Visible = false;
             dtRitorno.Visible = false;
+<<<<<<< HEAD
             tabPage2.Visible = false;
             
 
             dtPartenza.Value = DateTime.Now.AddDays(1);
             dtRitorno.Value = DateTime.Now.AddDays(2);
+=======
+
+
+
+
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
         }
 
 
@@ -352,6 +367,7 @@ airports.Add("Carcassonne(Francia)", "CCF");
         }
 
       
+<<<<<<< HEAD
   private void textBox1_TextChanged(object sender, EventArgs e)
         {
             listView1.Items.Clear();
@@ -368,6 +384,10 @@ airports.Add("Carcassonne(Francia)", "CCF");
             }
         }
 
+=======
+
+
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
         public void textBox1_Click(object sender, EventArgs e)
         {
             // Mostra la ListView quando viene cliccata la TextBox
@@ -381,7 +401,53 @@ airports.Add("Carcassonne(Francia)", "CCF");
                 textBox1.Text = listView1.SelectedItems[0].Text;
             }
         }
+<<<<<<< HEAD
        
+=======
+        public void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+            // Verifica se è selezionato l'elemento "50"
+            if (comboBox1.SelectedItem != null && comboBox1.SelectedItem.ToString() == "20")
+            {
+                // Imposta il valore della variabile a 50
+                budget = 20;
+
+            }
+            // Verifica se è selezionato l'elemento "50"
+            if (comboBox1.SelectedItem != null && comboBox1.SelectedItem.ToString() == "50")
+            {
+                // Imposta il valore della variabile a 50
+                budget = 50;
+            }
+            if (comboBox1.SelectedItem != null && comboBox1.SelectedItem.ToString() == "60")
+            {
+                // Imposta il valore della variabile a 50
+                budget = 60;
+            }
+
+            // Verifica se è selezionato l'elemento "50"
+            if (comboBox1.SelectedItem != null && comboBox1.SelectedItem.ToString() == "80")
+            {
+                // Imposta il valore della variabile a 50
+                budget = 80;
+            }
+            // Verifica se è selezionato l'elemento "50"
+            if (comboBox1.SelectedItem != null && comboBox1.SelectedItem.ToString() == "100")
+            {
+                // Imposta il valore della variabile a 50
+                budget = 100;
+            }
+            // Verifica se è selezionato l'elemento "50"
+            if (comboBox1.SelectedItem != null && comboBox1.SelectedItem.ToString() == "150")
+            {
+                // Imposta il valore della variabile a 50
+                budget = 150;
+            }
+        }
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+
 
 
         private void dtPartenza_ValueChanged(object sender, EventArgs e)
@@ -408,11 +474,21 @@ airports.Add("Carcassonne(Francia)", "CCF");
 
             // Formatta la data nel formato desiderato (anno-mese-giorno) utilizzando la cultura "en-US"
             string formattedDate2 = selectedDate2.ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+<<<<<<< HEAD
             if (selectedDate2 < DateTime.Now.AddDays(1))
+=======
+        }
+
+
+        private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (comboBox2.SelectedItem != null && comboBox2.SelectedItem.ToString() == "CITTA'")
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
             {
                 lbErroreData.Text = "Il dato deve essere dopo domani.";
                 //btnInformazioni.Enabled = false;
             }
+<<<<<<< HEAD
             else
             {
                 lbErroreData.Text = "";
@@ -460,6 +536,41 @@ airports.Add("Carcassonne(Francia)", "CCF");
         //    }
         //}
 
+=======
+            if (comboBox2.SelectedItem != null && comboBox2.SelectedItem.ToString() == "FAMIGLIA")
+            {
+                // Imposta il valore della variabile a 50
+                tipoViaggio = "FAM";
+
+            }
+            if (comboBox2.SelectedItem != null && comboBox2.SelectedItem.ToString() == "GOLF")
+            {
+                // Imposta il valore della variabile a 50
+                tipoViaggio = "GLF";
+
+
+            }
+            if (comboBox2.SelectedItem != null && comboBox2.SelectedItem.ToString() == "VITA NOTTURNA")
+            {
+                // Imposta il valore della variabile a 50
+                tipoViaggio = "NIT";
+
+            }
+            if (comboBox2.SelectedItem != null && comboBox2.SelectedItem.ToString() == " ALL'APERTO")
+            {
+                // Imposta il valore della variabile a 50
+                tipoViaggio = "OUT";
+
+            }
+
+            if (comboBox2.SelectedItem != null && comboBox2.SelectedItem.ToString() == "MARE")
+            {
+                // Imposta il valore della variabile a 50
+                tipoViaggio = "SEA";
+            }
+        }
+
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
         private void btnInformazioni_Click_1(object sender, EventArgs e)
         {
 
@@ -501,6 +612,7 @@ airports.Add("Carcassonne(Francia)", "CCF");
             }
             //  string message3 = $"Informazioni:\nPartenza: {airportCode}\nBudget: {budget}\nData di Andata: {formattedDate}\nData di Ritorno: {formattedDate2}";
             // MessageBox.Show(message3, "Dettagli Viaggio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+<<<<<<< HEAD
             // C$"https://www.ryanair.com/it/it/voli-low-cost/?from={airportCode}&out-from-date={formattedDate}&out-to-date={formattedDate2}&budget=150&trip-type-category={tipoViaggio}");
 
             // txtLink.Text = $"https://www.ryanair.com/it/it/voli-low-cost/?from={airportCode}&out-from-date={formattedDate}&out-to-date={formattedDate2}&budget=150&trip-type-category={tipoViaggio}";
@@ -633,10 +745,13 @@ airports.Add("Carcassonne(Francia)", "CCF");
                 pictureVolo.Image = Image.FromFile($"div_screenshot{num}.png");
                 num++;
             }
+=======
+            MessageBox.Show($"https://www.ryanair.com/it/it/voli-low-cost/?from={airportCode}&out-from-date={formattedDate}&out-to-date={formattedDate2}&budget={budget}&trip-type-category={tipoViaggio}");
+
+            txtLink.Text = $"https://www.ryanair.com/it/it/voli-low-cost/?from={airportCode}&out-from-date={formattedDate}&out-to-date={formattedDate2}&budget={budget}&trip-type-category={tipoViaggio}";
+            Process.Start(txtLink.Text);
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
         }
-
-
-
 
         private void txtPartenza_Click(object sender, EventArgs e)
         {
@@ -646,6 +761,18 @@ airports.Add("Carcassonne(Francia)", "CCF");
         }
 
 
+<<<<<<< HEAD
+
+        private void txtPartenza_Click(object sender, EventArgs e)
+        {
+            rbIntervallo.Visible = true;
+            rbSpecifica.Visible = true;
+            panelPartenza.Visible = true;
+        }
+
+
+=======
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
         private void rbSpecifica_CheckedChanged(object sender, EventArgs e)
         {
             if (rbSpecifica.Checked)
@@ -670,6 +797,7 @@ airports.Add("Carcassonne(Francia)", "CCF");
 
         }
 
+<<<<<<< HEAD
         private void btnMeteo_Click(object sender, EventArgs e)
         {
            
@@ -730,6 +858,9 @@ airports.Add("Carcassonne(Francia)", "CCF");
         }
 
      
+=======
+      
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
     }
 }
 
