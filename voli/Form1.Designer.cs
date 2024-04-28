@@ -37,6 +37,14 @@
             this.dtRitorno = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.btnInformazioni = new System.Windows.Forms.Button();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.txtLink = new System.Windows.Forms.TextBox();
             this.rbSpecifica = new System.Windows.Forms.RadioButton();
             this.rbIntervallo = new System.Windows.Forms.RadioButton();
@@ -44,6 +52,10 @@
             this.panelPartenza = new System.Windows.Forms.Panel();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.lbErroreData = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pictureVolo = new System.Windows.Forms.PictureBox();
@@ -51,11 +63,14 @@
             this.txtMeteo = new System.Windows.Forms.TextBox();
             this.pictureBoxMeteo = new System.Windows.Forms.PictureBox();
             this.btnMeteo = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.pictureBoxCartina = new System.Windows.Forms.PictureBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.btnCartina = new System.Windows.Forms.Button();
+=======
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.panelPartenza.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -63,14 +78,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureVolo)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMeteo)).BeginInit();
+<<<<<<< HEAD
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCartina)).BeginInit();
+=======
+=======
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panelPartenza.SuspendLayout();
+            this.tabControl.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.SuspendLayout();
             // 
             // listView1
             // 
             this.listView1.HideSelection = false;
+<<<<<<< HEAD
             this.listView1.Location = new System.Drawing.Point(28, 89);
+=======
+<<<<<<< HEAD
+            this.listView1.Location = new System.Drawing.Point(28, 89);
+=======
+            this.listView1.Location = new System.Drawing.Point(66, 101);
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(327, 325);
             this.listView1.TabIndex = 3;
@@ -78,7 +110,15 @@
             // 
             // textBox1
             // 
+<<<<<<< HEAD
             this.textBox1.Location = new System.Drawing.Point(105, 52);
+=======
+<<<<<<< HEAD
+            this.textBox1.Location = new System.Drawing.Point(105, 52);
+=======
+            this.textBox1.Location = new System.Drawing.Point(130, 52);
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(168, 20);
             this.textBox1.TabIndex = 5;
@@ -86,7 +126,15 @@
             // 
             // textBox2
             // 
+<<<<<<< HEAD
             this.textBox2.Location = new System.Drawing.Point(316, 51);
+=======
+<<<<<<< HEAD
+            this.textBox2.Location = new System.Drawing.Point(316, 51);
+=======
+            this.textBox2.Location = new System.Drawing.Point(319, 52);
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(163, 20);
@@ -106,12 +154,50 @@
             // label2
             // 
             this.label2.AutoSize = true;
+<<<<<<< HEAD
             this.label2.Location = new System.Drawing.Point(388, 35);
+=======
+<<<<<<< HEAD
+            this.label2.Location = new System.Drawing.Point(388, 35);
+=======
+            this.label2.Location = new System.Drawing.Point(374, 36);
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(17, 13);
             this.label2.TabIndex = 8;
             this.label2.Text = "A:";
             // 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "20",
+            "50",
+            "60",
+            "80",
+            "100",
+            "150"});
+            this.comboBox1.Location = new System.Drawing.Point(544, 52);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(86, 21);
+            this.comboBox1.TabIndex = 9;
+            // 
+            // lblbudget
+            // 
+            this.lblbudget.AutoSize = true;
+            this.lblbudget.Location = new System.Drawing.Point(562, 36);
+            this.lblbudget.Name = "lblbudget";
+            this.lblbudget.Size = new System.Drawing.Size(52, 13);
+            this.lblbudget.TabIndex = 10;
+            this.lblbudget.Text = "BUDGET";
+            // 
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             // dtPartenza
             // 
             this.dtPartenza.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -133,7 +219,15 @@
             // label3
             // 
             this.label3.AutoSize = true;
+<<<<<<< HEAD
             this.label3.Location = new System.Drawing.Point(603, 35);
+=======
+<<<<<<< HEAD
+            this.label3.Location = new System.Drawing.Point(603, 35);
+=======
+            this.label3.Location = new System.Drawing.Point(735, 36);
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 13;
@@ -141,6 +235,10 @@
             // 
             // btnInformazioni
             // 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.btnInformazioni.BackColor = System.Drawing.Color.Gray;
             this.btnInformazioni.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInformazioni.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -155,6 +253,47 @@
             // txtLink
             // 
             this.txtLink.Location = new System.Drawing.Point(28, 420);
+<<<<<<< HEAD
+=======
+=======
+            this.btnInformazioni.Location = new System.Drawing.Point(66, 607);
+            this.btnInformazioni.Name = "btnInformazioni";
+            this.btnInformazioni.Size = new System.Drawing.Size(159, 51);
+            this.btnInformazioni.TabIndex = 16;
+            this.btnInformazioni.Text = "FINALE";
+            this.btnInformazioni.UseVisualStyleBackColor = true;
+            this.btnInformazioni.Click += new System.EventHandler(this.btnInformazioni_Click_1);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "CITTA\'",
+            "FAMIGLIA",
+            "GOLF ",
+            "VITA NOTTURNA",
+            "ALL\'APERTO",
+            "MARE"});
+            this.comboBox2.Location = new System.Drawing.Point(966, 51);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(153, 21);
+            this.comboBox2.TabIndex = 17;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged_1);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(982, 36);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(119, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "CATEGORIA VIAGGIO:";
+            // 
+            // txtLink
+            // 
+            this.txtLink.Location = new System.Drawing.Point(66, 420);
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.txtLink.Name = "txtLink";
             this.txtLink.Size = new System.Drawing.Size(100, 20);
             this.txtLink.TabIndex = 19;
@@ -184,9 +323,20 @@
             // 
             // txtPartenza
             // 
+<<<<<<< HEAD
             this.txtPartenza.Location = new System.Drawing.Point(574, 51);
             this.txtPartenza.Name = "txtPartenza";
             this.txtPartenza.ReadOnly = true;
+=======
+<<<<<<< HEAD
+            this.txtPartenza.Location = new System.Drawing.Point(574, 51);
+            this.txtPartenza.Name = "txtPartenza";
+            this.txtPartenza.ReadOnly = true;
+=======
+            this.txtPartenza.Location = new System.Drawing.Point(706, 52);
+            this.txtPartenza.Name = "txtPartenza";
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.txtPartenza.Size = new System.Drawing.Size(100, 20);
             this.txtPartenza.TabIndex = 22;
             // 
@@ -197,32 +347,68 @@
             this.panelPartenza.Controls.Add(this.rbSpecifica);
             this.panelPartenza.Controls.Add(this.dtPartenza);
             this.panelPartenza.Controls.Add(this.dtRitorno);
+<<<<<<< HEAD
             this.panelPartenza.Location = new System.Drawing.Point(490, 89);
+=======
+<<<<<<< HEAD
+            this.panelPartenza.Location = new System.Drawing.Point(490, 89);
+=======
+            this.panelPartenza.Location = new System.Drawing.Point(622, 90);
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.panelPartenza.Name = "panelPartenza";
             this.panelPartenza.Size = new System.Drawing.Size(262, 83);
             this.panelPartenza.TabIndex = 23;
             // 
             // tabControl
             // 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.tabControl.AllowDrop = true;
             this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Controls.Add(this.tabPage2);
             this.tabControl.Controls.Add(this.tabPage3);
+<<<<<<< HEAD
             this.tabControl.Controls.Add(this.tabPage4);
             this.tabControl.Controls.Add(this.tabPage5);
             this.tabControl.Controls.Add(this.tabPage6);
+=======
+=======
+            this.tabControl.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabControl.AllowDrop = true;
+            this.tabControl.Controls.Add(this.tabPage1);
+            this.tabControl.Controls.Add(this.tabPage2);
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Multiline = true;
             this.tabControl.Name = "tabControl";
             this.tabControl.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabControl.SelectedIndex = 0;
+<<<<<<< HEAD
             this.tabControl.Size = new System.Drawing.Size(1475, 813);
+=======
+<<<<<<< HEAD
+            this.tabControl.Size = new System.Drawing.Size(1475, 813);
+=======
+            this.tabControl.Size = new System.Drawing.Size(1325, 756);
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.tabControl.TabIndex = 24;
             // 
             // tabPage1
             // 
+<<<<<<< HEAD
             this.tabPage1.Controls.Add(this.lbErroreData);
+=======
+<<<<<<< HEAD
+            this.tabPage1.Controls.Add(this.lbErroreData);
+=======
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.tabPage1.Controls.Add(this.listView1);
             this.tabPage1.Controls.Add(this.panelPartenza);
             this.tabPage1.Controls.Add(this.textBox1);
@@ -230,6 +416,10 @@
             this.tabPage1.Controls.Add(this.textBox2);
             this.tabPage1.Controls.Add(this.txtLink);
             this.tabPage1.Controls.Add(this.label1);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.btnInformazioni);
             this.tabPage1.Controls.Add(this.label3);
@@ -270,7 +460,10 @@
             // 
             // tabPage3
             // 
+<<<<<<< HEAD
             this.tabPage3.Controls.Add(this.btnCartina);
+=======
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.tabPage3.Controls.Add(this.txtMeteo);
             this.tabPage3.Controls.Add(this.pictureBoxMeteo);
             this.tabPage3.Controls.Add(this.btnMeteo);
@@ -306,6 +499,7 @@
             this.btnMeteo.Text = "METEO";
             this.btnMeteo.UseVisualStyleBackColor = true;
             this.btnMeteo.Click += new System.EventHandler(this.btnMeteo_Click);
+<<<<<<< HEAD
             // 
             // tabPage4
             // 
@@ -355,27 +549,78 @@
             this.btnCartina.Text = "button1";
             this.btnCartina.UseVisualStyleBackColor = true;
             this.btnCartina.Click += new System.EventHandler(this.btnCartina_Click_1);
+=======
+=======
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.comboBox2);
+            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.btnInformazioni);
+            this.tabPage1.Controls.Add(this.lblbudget);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Location = new System.Drawing.Point(23, 4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1298, 748);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(23, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1298, 748);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.ClientSize = new System.Drawing.Size(1475, 813);
             this.Controls.Add(this.tabControl);
             this.Name = "Form1";
             this.Text = "Form1";
+<<<<<<< HEAD
+=======
+=======
+            this.ClientSize = new System.Drawing.Size(1325, 756);
+            this.Controls.Add(this.tabControl);
+            this.Name = "Form1";
+            this.Text = "Form1";
+          
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.panelPartenza.ResumeLayout(false);
             this.panelPartenza.PerformLayout();
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureVolo)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMeteo)).EndInit();
+<<<<<<< HEAD
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCartina)).EndInit();
+=======
+=======
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
             this.ResumeLayout(false);
 
         }
@@ -390,6 +635,14 @@
         private System.Windows.Forms.DateTimePicker dtRitorno;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnInformazioni;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label5;
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
         private System.Windows.Forms.TextBox txtLink;
         private System.Windows.Forms.RadioButton rbSpecifica;
         private System.Windows.Forms.RadioButton rbIntervallo;
@@ -397,6 +650,10 @@
         private System.Windows.Forms.Panel panelPartenza;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPage1;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
         private System.Windows.Forms.Label lbErroreData;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.PictureBox pictureVolo;
@@ -404,11 +661,17 @@
         private System.Windows.Forms.Button btnMeteo;
         private System.Windows.Forms.TextBox txtMeteo;
         private System.Windows.Forms.PictureBox pictureBoxMeteo;
+<<<<<<< HEAD
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.PictureBox pictureBoxCartina;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Button btnCartina;
+=======
+=======
+        private System.Windows.Forms.TabPage tabPage2;
+>>>>>>> f36b63772c294f7ace677593f39c814cfe538784
+>>>>>>> 76831f839fe0f598e2cd67653e987af712de9c1c
     }
 }
 
